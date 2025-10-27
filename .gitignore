@@ -101,3 +101,52 @@ argocd/values.local.yaml
 rollout-history/
 analysis-templates/
 rollout-debug.log
+
+
+# ---------------------------
+# Terraform ignores
+# ---------------------------
+
+# Local Terraform state
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfplan.*
+
+# Local-only config
+.terraform/
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# Variable and secret files
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+*.tfvars.backup
+
+# Override and environment files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Sensitive output files
+*.zip
+*.pem
+*.key
+*.p12
+*.cer
+
+# CLI local cache
+.terraform.tfstate.backup
+.terraformrc
+terraform.rc
+
+# Local test or scratch files
+*.bak
+*.tmp
+*.backup
+local.tfvars
+*.example.tfvars
