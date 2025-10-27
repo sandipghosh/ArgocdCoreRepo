@@ -1,0 +1,103 @@
+# ---------------------------
+# Common Kubernetes ignores
+# ---------------------------
+
+# Kube config and credentials
+.kube/
+*.kubeconfig
+*.conf
+*.csr
+*.crt
+*.key
+*.pem
+
+# Temporary manifest files
+*.yaml~
+*.yml~
+*.tmp
+*.bak
+*.swp
+*.orig
+*.log
+
+# kubectl cache & plugin data
+.kubectl/
+.kube/cache/
+.kube/http-cache/
+
+# Kustomize build output
+kustomization.yaml.backup
+kustomize.out
+*.kustomize.yaml
+
+# Helm generated files
+charts/
+Chart.lock
+values.local.yaml
+values-dev.yaml
+values-test.yaml
+values-prod.yaml
+.tmp/
+helmfile*.lock
+*.tgz
+
+# Minikube / Kind cluster artifacts
+.minikube/
+.kind/
+*.kind.yaml
+*.kind-config.yaml
+
+# Docker-related files
+docker-compose.override.yml
+docker-compose.local.yml
+.dockerignore
+.env
+.envrc
+
+# VS Code and IDE artifacts
+.vscode/
+.idea/
+*.code-workspace
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# Argo CD-specific ignores
+# ---------------------------
+
+# Argo CD local configuration
+.argocd/
+.argocd-local/
+argocd-repo-server/
+argocd-application-controller/
+argocd-redis/
+argocd-server/
+
+# Argo CD manifests generated during setup or sync
+argocd-install.yaml
+argocd-generated.yaml
+argocd-app.yaml
+argo-app.yaml
+tmp-argocd.yaml
+test-*.yaml
+
+# Argo CD secret files (never commit!)
+*.enc.yaml
+*-secret.yaml
+secret.yaml
+secrets/
+credentials/
+passwords.txt
+token.txt
+
+# Argo CD Helm charts (optional)
+charts/argocd/
+argocd/charts/
+argocd/values.local.yaml
+
+# Argo Rollouts (if used)
+rollout-history/
+analysis-templates/
+rollout-debug.log
